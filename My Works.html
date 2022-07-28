@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>最終課題</title>
+    <link rel="stylesheet" href="./css/My Works.css" media="screen">
+</head>
+
+<body>
+    <header>
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <div class="menu-content">
+                <ul>
+                    <li>
+                        <a href="index.html">My Tasks</a>
+                    </li>
+                    <li>
+                        <a href="My Profile.html">My Profile</a>
+                    </li>
+                    <li>
+                        <a href="My Works.html">My Works</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>    
+    <div class="kadai">
+        <h2>
+            Web演習最終課題
+        </h2>
+        <h1 >
+            <b>My Works</b>
+        </h1>
+        <h3 >
+            ※画像はリンクになっています
+        </h3>
+        <nav>
+            <ul>
+                <li class="animate__fadeInUp animate__animated">
+                    <a href="https://riomurakoshi.github.io/grass/"><img src="./img/grass.jpg" alt="" width="682" height="341"><a class="moji"><b>ツール：blender</b></a>
+                </li>
+                <li class="animate__fadeInUp animate__animated">
+                    <a href="https://youtu.be/Sfqf8LZMLmM"><img src="./img/bool.png" alt="" width="682" height="341"><a class="moji"><b>ツール：blender</b></a>
+                </li>
+                <li class="animate__fadeInUp animate__animated">
+                    <a href="https://riomurakoshi.github.io/figua/"><img src="./img/figua.jpg" alt="" width="682" height="341"><a class="moji"><b>ツール：blender</b></a>
+                </li>
+                <li class="animate__fadeInUp animate__animated">
+                    <a href="https://riomurakoshi.github.io/karender/"><img src="./img/karender.jpg" alt="" width="800" height="341"><a class="moji"><b>ツール：レーザーカッター、MDF、illustrator</b></a>
+                </li>
+            </ul>
+        </nav>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+<script>
+$(function () {
+   /** ページトップ処理 **/
+    // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+</script>
+<a id="pagetop" href="#top" class="page_top" style="display: none;"><img src="./img/icon.png"></a>
+    </div>
+</body>
+
+</html>

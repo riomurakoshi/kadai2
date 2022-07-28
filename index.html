@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>最終課題</title>
+    <link rel="stylesheet" href="./css/style.css" media="screen">
+</head>
+
+<body>
+    <header>
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <div class="menu-content">
+                <ul>
+                    <li>
+                        <a href="index.html">My Tasks</a>
+                    </li>
+                    <li>
+                        <a href="My Profile.html">My Profile</a>
+                    </li>
+                    <li>
+                        <a href="My Works.html">My Works</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>    
+    <div class="kadai">
+        <h2>
+            Web演習最終課題
+        </h2>
+        <h1 >
+            <b>My Tasks</b>
+        </h1>
+        <h3 >
+            ※画像はリンクになっています
+        </h3>
+        <nav>
+            <ul>
+                <li class="animate__fadeInUp animate__animated">
+                    <a href="https://riomurakoshi.github.io/iro/"><img src="./img/iro.jpg" alt="" width="682" height="341"><a class="moji"><b>色の印象</b></a>
+                </li>
+                <li class="animate__fadeInUp animate__animated">
+                    <a href="https://riomurakoshi.github.io/meisi/"><img src="./img/meisi.jpg" alt="" width="682" height="341"><a  class="moji"><b>ターゲットに合わせた名刺</b></a>
+                </li>
+                <li class="animate__fadeInUp animate__animated">
+                    <a href="https://riomurakoshi.github.io/vol.7/"><img src="./img/pe-ji.jpg" alt="" width="682" height="341"><a  class="moji"><b>文字組みしたHTML</b></a>
+                </li>
+                <li class="animate__fadeInUp animate__animated">
+                    <a href="https://riomurakoshi.github.io/ueki/"><img src="./img/ueki_my.jpg" alt="" width="682" height="242"><a  class="moji"><b>植木屋のwebデザイン</b></a>
+                </li>
+                <li class="animate__fadeInUp animate__animated">
+                    <a href="https://riomurakoshi.github.io/vol.10/"><img src="./img/ueki.jpg" alt="" width="682" height="292"><a  class="moji"><b>コーディングした植木屋のサイト</b></a>
+                </li>
+            </ul>
+        </nav>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+<script>
+$(function () {
+   /** ページトップ処理 **/
+    // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+</script>
+<a id="pagetop" href="#top" class="page_top" style="display: none;"><img src="./img/icon.png"></a>
+    </div>
+</body>
+
+</html>
